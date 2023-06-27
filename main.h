@@ -126,10 +126,10 @@ char buffer[],
 	int flags, int width, int precision, int size);
 
 /**** UTILS ***/
-int append_hexa_code(char, char[], int);
-int is_printable(char);
-long int convert_size_number(long int num, int size);
-int is_digit(char);
-long int convert_size_unsgnd(unsigned long int num, int size);
+int append_hexa_code(char ascii, char buffer[], int j);
+int is_printable(char a);
+long int convert_size_number(long int number, int size);
+int is_digit(char a);
+long int convert_size_unsgnd(unsigned long int number, int size);
 
 #endif
