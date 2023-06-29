@@ -94,7 +94,7 @@ int write_number(int arglist, int ind, char buffer[],
  */
 
 int write_num(int ind, char buffer[],
-	int flags, int width, int prec,
+	int flags, int width, int precision,
 	int lgth, char dd, char otherch)
 {
 

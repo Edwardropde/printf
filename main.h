@@ -40,8 +40,8 @@ typedef struct fmt fmt_t;
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *j, va_list arglist, char buffer[],
 		int flags, int width, int precision, int size);
+void print_buffer(char buffer[], int *buff_ind);
 
-/* Functions */
 int print_char(va_list arglist, char buffer[],
 		int flags, int width, int precision, int size);
 int print_string(va_list arglist, char buffer[],
@@ -64,7 +64,7 @@ int print_hexa_upper(va_list arglist, char buffer[],
 int print_hexa(va_list arglist, char mapval[], char buffer[],
 		int flags, char chflag, int width, int precision, int size);
 
-int print_pointer(va_list types, char buffer[],
+int print_pointer(va_list arglist, char buffer[],
 		int flags, int width, int precision, int size);
 int print_non_printable(va_list arglist, char buffer[],
 		int flags, int width, int precision, int size);
@@ -75,11 +75,8 @@ int print_rot13string(va_list arglist, char buffer[],
 
 int get_width(const char *format, int *j, va_list arglist);
 int get_size(const char *format, int *j);
-int get_flags(const char *format, int *l);
+int get_flags(const char *format, int *j);
 int get_precision(const char *format, int *j, va_list arglist);
-
-int print_reverse(va_list types, char buffer[],
-		int flags, int width, int precision, int size);
 
 int handle_write_char(char k, char buffer[],
 		int flags, int width, int precision, int size);
