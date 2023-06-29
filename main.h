@@ -38,7 +38,7 @@ struct fmt
 typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
-int handle_print(const char *fmt, int *j, va_list arglist, char buffer[],
+int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
 		int flags, int width, int precision, int size);
 void print_buffer(char buffer[], int *buff_ind);
 
@@ -85,7 +85,7 @@ int write_pointer(char buffer[], int ind, int lgth,
 int write_number(int arglist, int ind, char buffer[],
 		int flags, int width, int precision, int size);
 int write_num(int ind, char buffer[],
-		int flags, int width, int precision,
+		int flags, int width, int prec,
 		int lgth, char dd, char otherch);
 int write_unsgnd(int arglist, int ind,
 char buffer[],
